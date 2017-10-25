@@ -536,11 +536,11 @@ e.g. `join p/3 e/1`
 
 * *Redo* : `redo`
 
-* *Selecting every event a person has joined* : `selectE p/INDEX` +
-e.g. `selectE p/1`
+* *Selecting every event a person has joined* : `selectE PERSON_INDEX` +
+e.g. `selectE 1`
 
-* *Selecting every person in an event* : `select e/INDEX` +
-e.g.`select e/2`
+* *Selecting every person in an event* : `showP EVENT_INDEX` +
+e.g.`showP 2`
 
 * *Sort* : `sort`
 
