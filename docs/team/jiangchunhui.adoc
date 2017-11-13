@@ -134,7 +134,7 @@ include::../DeveloperGuide.adoc[tag=portrait]
 
 ==== External behavior
 User can type the command `login`, then a Facebook login page will pop up.
-User can then enter his Facebook account and password, and import his friends' contact into Planno.
+User can then enter his Facebook account and password, and import his friends' contacts into Planno.
 
 ==== Justification
 User can use it to import many contacts at the same time.
