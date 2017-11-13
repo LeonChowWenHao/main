@@ -353,7 +353,7 @@ Selects the 1st person in the results of the `find` command.
 
 You will see the following after typing `select 1`:
 
-image::UG_Select.png[width="790"]
+image::UG_Select.PNG[width="790"]
 _Figure 3.8: select command result_
 
 // tag::join[]
@@ -421,7 +421,7 @@ Shows all participants who are involved in the 1st event of event list.
 
 Figure 3.11 shows the result of the example above: +
 
-image::UG_show person.png[width='790']
+image::UG_show_person.png[width='790']
 _Figure 3.11: show persons result_
 
 // end::showP[]
@@ -450,18 +450,19 @@ Shows all events which the 1st person in the results of the `find` command joins
 
 You will see the following after typing `list` and `selectE 2`: +
 
-image::UG_select event.png[width='790']
+image::UG_select_event.png[width='790']
 _Figure 3.12: select events result_
 
 // end::selectE[]
 
-=== Displaying emails of every person in an event : `displayEmails`
+=== Displaying particulars of every person in an event : `display`
 
-You can use it to view the emails of every person in an event. +
-Format: `displayEmails INDEX`
+You can use it to view a certain particular of every person in an event. +
+Format: `display EVENT_INDEX PARTICULAR`
 
 ****
-* Shows emails of every person in the event specified by `INDEX`.
+* The `PARTICULAR` must be either `email`, `phone`, or `address`.
+* Shows emails of every person in the event specified by `EVENT_INDEX`.
 * The index refers to the index number shown in the most recent event listing.
 * The index *must be a positive integer* `1, 2, 3, ...`.
 ****
@@ -470,13 +471,13 @@ Examples: +
 Assuming that you have typed `join p/1 e/1` and `join p/2 e/1` before this example.
 
 * `list` +
-`displayEmails 1` +
-Shows the email of every person who is in the first event in the address book.
+`display 1 email` +
+Shows the email of every person who is in the first event in the person list.
 
-You will see the following after typing `list` and `displayEmails 1`: +
+The following particulars will be displayed in the Information Board after you type `list` and `display 1 email`: +
 
-image::UG_displayEmails.png[width='790']
-_Figure 3.13:  display emails result_
+image::UG_display_email.png[width='790']
+_Figure 3.13: display result_
 
 // tag::portrait[]
 === Attaching a portrait to a person: `portrait`
@@ -498,6 +499,7 @@ Format: `portrait PERSON_INDEX p/IMAGE_FILE_PATH`
 ****
 * The `image file path` should be in this format: +
  `HARD_DISK_NAME:/[FOLDER_NAME]/FILE_NAME` +
+* You can leave the IMAGE_FILE_PATH as empty to remove the person's portrait. +
 * The application only supports .jpg and .png images.
 ****
 
@@ -540,17 +542,17 @@ Format & Example: `toggle`
 
 You will see the following after typing the toggle command when the information board and events list are displayed but a `select` command has not been entered:
 
-image::UG_Toggle1.png[]
+image::UG_Toggle1.PNG[]
 _Figure 3.15.1 toggle result when browser is displayed_
 
 You will see the following after typing the toggle command when the browser is displayed:
 
-image::UG_Toggle2.png[]
+image::UG_Toggle2.PNG[]
 _Figure 3.15.2 toggle result when information board and events list are displayed_
 
 You will see the following after typing the toggle command when the information board and events list are displayed and a `select` command:
 
-image::UG_Toggle3.png[]
+image::UG_Toggle3.PNG[]
 _Figure 3.15.3 toggle result when information board and events list are displayed and a `select` command is entered before_
 
 // end::toggle[]
